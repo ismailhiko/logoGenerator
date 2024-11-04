@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personnalisation du Logo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Personnalisation du Logo</h1>
+<div id="flex">
+  <!-- Formulaire pour la personnalisation -->
+  <form id="logoForm">
+    <label for="mainText">Texte principal :</label>
+    <input type="text" id="mainText" name="mainText" placeholder="Entrez le texte principal" onchange="updateLogo()" required />
+    
+    <label for="subText">Sous-texte :</label>
+    <input type="text" id="subText" name="subText" placeholder="Entrez le sous-texte" onchange="updateLogo()" />
+
+    <label for="mainTextSize">Taille du texte principal :</label>
+    <input type="range" id="mainTextSize" name="mainTextSize" min="10" max="100" value="32" onchange="updateLogo()" />
+
+    <label for="subTextSize">Taille du sous-texte :</label>
+    <input type="range" id="subTextSize" name="subTextSize" min="10" max="50" value="20" onchange="updateLogo()" />
+    
+    <label for="textColor">Couleur du texte :</label>
+    <input type="color" id="textColor" name="textColor" value="#18d8a8" onchange="updateLogo()" />
+
+    <label for="subTextColor">Couleur du subTexte :</label>
+    <input type="color" id="subTextColor" name="subTextColor" value="#18d8a8" onchange="updateLogo()" />
+
+    <label for="boxColor">Couleur du cadre :</label>
+    <input type="color" id="boxColor" name="boxColor" value="#18d8a8" onchange="updateLogo()" />
+
+    <label for="backgroundSelect">Arrière-plan :</label>
+    <select id="backgroundSelect" name="backgroundSelect" onchange="updateLogo()">
+        <option value="">Aucun</option>
+        <option value="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3ZyOXNocGNmYnhtNHlxMWVwenBiN3M1YW9kMGw0d3BmZnBxeXdxZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3vRnoppYtfEbemBO/giphy.webp">Fond Feu d'artifice</option>
+        <option value="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3UwNWptcmZtcXZ5aHA1OHF4NmJ6NmZnaXp3OXlwOXA3a2k1cGJtdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3fQnAa8cHBgzVQFq/giphy.webp">Fond Vagues</option>
+        <option value="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmQ5bDhmZWpnNXRpOW1jbDF2bDA4d3hqZmQwcGdubTU0NW1pMWE0cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o85xzkvl1siB2rHSo/giphy.webp">Fond Néon</option>
+    </select>
+
+    <label for="imageSelect">Image de logo :</label>
+    <select id="imageSelect" name="imageSelect" onchange="updateLogo()">
+        <option value="">Aucune</option>
+        <option value="https://banner2.cleanpng.com/20240323/quo/transparent-blue-peacock-peacock-painting-feather-art-wildlife-peacock-painting-on-black-background-majestic-bea65fe9800ec6200.35309397.webp">peacock</option>
+        <option value="https://purepng.com/public/uploads/large/51511048126l5lkh96pb5jx5miwv7azaqnlcnqkh3jt8nkv1afoc8c2vabkzzb2mpzoaxo7gsbrcluattadzei0mow1pmti39dgmmovd8rm2kmv.png">Lion's  butt</option>
+        <option value="https://purepng.com/public/uploads/large/91508087723flgloljqveh3349rl397piv080skvkgiggywx3yd8gsbedscfv3pw8kukntmgzzrwmxtbzxyqig5q77hxxjif6kuz3sncqs3hrhe.png">aigle</option>
+    </select>
+
+  <label for="imageSize">Taille de l'image :</label>
+  <input type="range" id="imageSize" name="imageSize" min="50" max="200" value="100" onchange="updateLogo()" />
+    
+  </form>
+
+  <div id="logoDisplay">
+    <h2 id="displayMainText" class="draggable">Votre Logo</h2>
+    <p id="displaySubText" class="draggable">Sous-titre ici</p>
+    <div id="logoImageContainer" class="draggable">
+        <!-- Image added here if selected -->
+    </div>
+  </div>
+</div>
+
+
+  <script src="component.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+/* Style pour le formulaire */
+#logoForm {
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+  
+  #logoForm label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  #logoForm input, #logoForm select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+  }
+
+  #flex {
+    display: flex;            /* Enables flex layout */
+  }
+
+  #logoForm input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+  }
+  
+  /* Style pour l'affichage du logo */
+ /* Style for the container */
+#logoDisplay {
+  position: relative; /* Contains the draggable elements within this boundary */
+  width: 400px;       /* Set desired width */
+  height: 300px;      /* Set desired height */
+  margin: 20px auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;   /* Ensures content stays inside the container */
+}
+
+/* Styling for draggable elements */
+.draggable {
+  position: absolute; /* Allows free positioning within logoDisplay */
+  cursor: move;
+  /* Optional starting position */
+  top: 50px;
+  left: 50px;
+}
+
+  
+  #displayMainText {
+    font-size: 2em;
+    border: 1px solid black; padding: 5px;
+  }
+  
+  #displaySubText {
+    font-size: 1.2em;
+    color: #666;
+  }
+
+  
